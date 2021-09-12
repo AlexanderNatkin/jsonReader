@@ -9,9 +9,8 @@ public class GSONParser {
     public Root parse() {
         Gson gson = new Gson();
 
-        try (FileReader reader = new FileReader("tickets.json")) {
-            Root root = gson.fromJson(reader, Root.class);
-            return root;
+        try (FileReader reader = new FileReader("./tickets.json")) {
+            return gson.fromJson(reader, Root.class);
         } catch (Exception e) {
             System.out.println("Exception error " + e);
         }
