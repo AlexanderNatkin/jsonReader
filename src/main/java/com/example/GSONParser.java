@@ -1,16 +1,21 @@
 package com.example;
 
 import com.google.gson.Gson;
+import org.apache.commons.io.IOUtils;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class GSONParser {
 
-    public Root parse() throws FileNotFoundException {
+    public Root parse() throws IOException {
         Gson gson = new Gson();
 
-        FileReader reader = new FileReader("src/main/resources/tickets.json");
-        return gson.fromJson(reader, Root.class);
+        ClassLoader classLoader = gson.getClass().getClassLoader();
+        InputStream inputStream = classLoader.getResourceAsStream("tickets.json");
+        assert inputStream != null;
+        String jsonString = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
+
+        return gson.fromJson(jsonString, Root.class);
     }
 }
