@@ -42,7 +42,7 @@
     <build>
         <resources>
             <resource>
-                <directory>.</directory>
+                <directory>src/main/resources</directory>
                 <includes>
                     <include>tickets.json</include>
                 </includes>
