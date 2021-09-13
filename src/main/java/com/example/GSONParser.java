@@ -10,7 +10,7 @@ public class GSONParser {
     public Root parse() throws FileNotFoundException {
         Gson gson = new Gson();
 
-        FileReader reader = new FileReader("tickets.json");
+        FileReader reader = new FileReader("src/main/resources/tickets.json");
         return gson.fromJson(reader, Root.class);
     }
 }
