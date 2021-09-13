@@ -1,13 +1,13 @@
 package com.example;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         GSONParser parser = new GSONParser();
         Root root = parser.parse();
 
