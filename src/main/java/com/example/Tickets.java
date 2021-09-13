@@ -1,5 +1,9 @@
 package com.example;
 
+/*
+Класс для сохранения параметров, считываемых и файла JSON
+*/
+
 public class Tickets {
 
     private String departure_date;

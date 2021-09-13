@@ -1,5 +1,9 @@
 package com.example;
 
+/*
+Класс с методами для считывания файла JSON с папки resources
+ */
+
 import com.google.gson.Gson;
 import org.apache.commons.io.IOUtils;
 
